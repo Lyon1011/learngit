@@ -31,3 +31,5 @@ git checkout -- readme.txt //将文件回退到最近一次扔进add的状态
 
 rm test.txt //删除工作区的文件
 git test.txt //删除版本库的文件
+
+git push origin master //将本地的master分支最新修改上传到远程库
