@@ -17,12 +17,13 @@ cat filename //输出文本内容
 git reflog //展开记录每次操作的窗口 
 git diff HEAD -- readme.txt //比较两次文件的差别
 
-git checkout -- readme.txt //将没有提交到master区的修改全删掉（让这个文件回到最近一次git commit或git add的状态,直接修改文件）
+git checkout -- readme.txt //将没有提交到暂存区的修改全删掉（让这个文件回到最近一次git commit或git add的状态,直接修改文件）
 
 ---------撤销总结--------
+--已经进入版本库
 git reset --hard version //同下
 git reset --hard HEAD^ //将版本库里的内容撤销回上一个版本
-
+--已经进入暂存区
 git reset HEAD readme.txt //将暂存区的文件撤回到工作区
-
+--还在工作区
 git checkout -- readme.txt //将文件回退到最近一次扔进add的状态
