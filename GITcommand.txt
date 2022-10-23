@@ -33,3 +33,5 @@ rm test.txt //删除工作区的文件
 git test.txt //删除版本库的文件
 
 git push origin master //将本地的master分支最新修改上传到远程库
+
+git clone git@github.com:Lyon1011/远程库名.git//在创建另外一个远程库后,可以使用clone来克隆一份
