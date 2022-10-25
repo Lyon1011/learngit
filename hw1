@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class temp{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String[] tempe=sc.nextLine().split(" ");
+        String[] tempm=sc.nextLine().split(" ");
+        new Employee(tempe[0], tempe[1], Double.parseDouble(tempe[2])).print();
+        System.out.println();
+        new Manager(tempm[0],tempm[1], Double.parseDouble(tempm[2]),Double.parseDouble(tempm[3])).print();
+    }
+}
+
+class Employee{
+    private String name;
+    private String id;
+    private double salary;
+
+    public Employee(String name, String id, double salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+
+//    @Override
+    public void print() {
+        System.out.printf("姓名: %s, 工号: %s, 基本工资: %.1f", name,  id, salary);
+    }
+}
+class Manager extends Employee{
+    private double bonus;
+
+    public Manager(String name, String id, double salary, double bonus) {
+        super(name, id, salary);
+        this.bonus = bonus;
+    }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.printf(", 奖金: %.1f", bonus);
+    }
+}
