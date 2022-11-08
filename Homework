@@ -50,3 +50,37 @@ class Pig extends Animal{
 
 ////////////////////////////////////////////////
 
+public class Test {
+    public static void main(String[] args) {
+
+    }
+}
+
+abstract class Shape{
+    public String color;
+    public abstract double area();
+    public abstract double perimeter();
+    public void setColor(String color){
+        this.color=color;
+    }
+}
+
+class Circle extends Shape{
+    private double a;
+    private double b;
+    private double c;
+
+    public double s(){
+        return (a+b+c)/2;
+    }
+
+    @Override
+    public double area() {
+        return Math.sqrt(s()*(s()-a)*(s()-b)*(s()-c));
+    }
+
+    @Override
+    public double perimeter() {
+        return a+b+c;
+    }
+}
